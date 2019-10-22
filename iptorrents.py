@@ -1,4 +1,4 @@
-# VERSION: 1.00
+# VERSION: 1.01
 # AUTHORS: txtsd (thexerothermicsclerodermoid@gmail.com)
 
 # iptorrents.py - A plugin for qBittorrent to search on iptorrents.com
@@ -123,7 +123,7 @@ class iptorrents(object):
         tor_table = _tor_table.groups()[0] if _tor_table else None
 
         results = re.finditer(
-            'href="(?P<desc_link>/details.+?)">(?P<name>.+?)</a>.+?href="(?P<link>/download.+?)".+?(?P<size>\d+ (|K|M|G)B).+?t_seeders">(?P<seeds>\d+).+?t_leechers">(?P<leech>\d+)</t',
+            '<a class=" hv" href="(?P<desc_link>/details.+?)">(?P<name>.+?)</a>.+?href="(?P<link>/download.+?)".+?(?P<size>\d+?\.*?\d*? (|K|M|G)B)<.+?t_seeders">(?P<seeds>\d+).+?t_leechers">(?P<leech>\d+?)</t',
             tor_table
         )
 
