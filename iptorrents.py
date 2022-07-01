@@ -143,7 +143,7 @@ class iptorrents(object):
         num_pages = _num_pages.groups()[1] if _num_pages else None
 
         if (page and num_pages) and (int(page) < int(num_pages)):
-            next_page = str(int(page) + 1)
+            next_page = int(page) + 1
             self.search_parse(link, next_page)
 
     def download_torrent(self, info):
