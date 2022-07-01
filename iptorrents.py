@@ -105,10 +105,7 @@ class iptorrents(object):
 
         charset = 'utf-8'
         info = res.info()
-        try:
-            _, charset = info['Content-Type'].split('charset=')
-        except:
-            pass
+        _, charset = info['Content-Type'].split('charset=')
         data = res.read()
         data = data.decode(charset, 'replace')
 
