@@ -24,6 +24,7 @@ import tempfile
 import io
 import gzip
 # Some other imports if necessary
+from urllib.error import URLError
 import urllib.request as request
 from urllib.parse import urlencode, quote
 from http.cookiejar import CookieJar
@@ -91,7 +92,7 @@ class iptorrents(object):
             )
             logging.debug("Connected using given credentials.")
             self.session = session
-        except request.URLError as errno:
+        except URLError as errno:
             print("Connection Error: {}".format(errno.reason))
 
     def _get_link(self, link):
@@ -99,7 +100,7 @@ class iptorrents(object):
         try:
             logging.debug("Trying to open " + link)
             res = self.session.open(link)
-        except request.URLError as errno:
+        except URLError as errno:
             print("Connection Error: {}".format(errno.reason))
             return ""
 
@@ -153,7 +154,7 @@ class iptorrents(object):
         try:
             logging.debug("Trying to download " + url)
             res = self.session.open(url)
-        except request.URLError as errno:
+        except URLError as errno:
             print("Connection Error: {}".format(errno.reason))
             return ""
         data = res.read()
