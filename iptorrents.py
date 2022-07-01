@@ -93,7 +93,8 @@ class iptorrents(object):
             logging.debug("Connected using given credentials.")
             self.session = session
         except URLError as errno:
-            print("Connection Error: {}".format(errno.reason))
+            print("Connection Error: {} {}".format(errno.code, errno.reason))
+            return
 
     def _get_link(self, link):
         """Return the HTML content of url page as a string """
@@ -101,7 +102,7 @@ class iptorrents(object):
             logging.debug("Trying to open " + link)
             res = self.session.open(link)
         except URLError as errno:
-            print("Connection Error: {}".format(errno.reason))
+            print("Connection Error: {} {}".format(errno.code, errno.reason))
             return ""
 
         charset = 'utf-8'
@@ -155,7 +156,7 @@ class iptorrents(object):
             logging.debug("Trying to download " + url)
             res = self.session.open(url)
         except URLError as errno:
-            print("Connection Error: {}".format(errno.reason))
+            print("Connection Error: {} {}".format(errno.code, errno.reason))
             return ""
         data = res.read()
         if data[:2] == b'\x1f\x8b':
