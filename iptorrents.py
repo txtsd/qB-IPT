@@ -17,19 +17,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from helpers import htmlentitydecode
-from novaprinter import prettyPrinter
+import gzip
+import io
+import logging
 import re
 import tempfile
-import io
-import gzip
-# Some other imports if necessary
-from urllib.error import URLError
 import urllib.request as request
-from urllib.parse import urlencode, quote
 from http.cookiejar import CookieJar
-# Logging
-import logging
+from urllib.error import URLError
+from urllib.parse import urlencode, quote
+
+from helpers import htmlentitydecode
+from novaprinter import prettyPrinter
+
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
