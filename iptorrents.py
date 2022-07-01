@@ -61,7 +61,7 @@ class iptorrents(object):
         Class initialization
         Requires personal login information
         """
-        self.ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0'
+        self.ua = 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0'
         self.session = None
 
         self._login()
