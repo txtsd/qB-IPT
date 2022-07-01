@@ -120,7 +120,7 @@ class iptorrents(object):
         tor_table = _tor_table.groups()[0] if _tor_table else None
 
         results = re.finditer(
-            '<a class=" hv" href="(?P<desc_link>/details.+?)">(?P<name>.+?)</a>.+?href="(?P<link>/download.+?)".+?(?P<size>\d+?\.*?\d*? (|K|M|G)B)<.+?t_seeders">(?P<seeds>\d+).+?t_leechers">(?P<leech>\d+?)</t',
+            r'<a class=" hv" href="(?P<desc_link>/details.+?)">(?P<name>.+?)</a>.+?href="(?P<link>/download.+?)".+?(?P<size>\d+?\.*?\d*? (|K|M|G)B)<.+?t_seeders">(?P<seeds>\d+).+?t_leechers">(?P<leech>\d+?)</t',
             tor_table
         )
 
@@ -135,7 +135,7 @@ class iptorrents(object):
             entry['desc_link'] = self.url + result.group('desc_link')
             prettyPrinter(entry)
 
-        _num_pages = re.search('<a>Page <b>(\d+)</b> of <b>(\d+)</b>', data)
+        _num_pages = re.search(r'<a>Page <b>(\d+)</b> of <b>(\d+)</b>', data)
         page = _num_pages.groups()[0] if _num_pages else None
         num_pages = _num_pages.groups()[1] if _num_pages else None
 
