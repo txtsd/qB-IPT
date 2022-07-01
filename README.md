@@ -23,14 +23,14 @@ You can do this by editing these specific lines (41:42).
 ```
 
 Now replace the "username" and "password" with *your* username and password, surrounded by quotation marks.
-So if your username is `foobar` and your password is `bazqux` these lines should read:
+So if your username is `herp` and your password is `derp` these lines should read:
 
 ```
     ...
     # SET THESE VALUES
     #
-    username = "foobar"
-    password = "bazqux"
+    username = "herp"
+    password = "derp"
     ...
 ```
 
