@@ -1,8 +1,10 @@
-qB-IPT
-======
+# qB-IPT
 
-Installation
-------------
+## Notice
+
+This project has been discontinued in favor of [Jackett](https://github.com/Jackett/Jackett). Jackett supports IPTorrents [out-of-the-box](https://github.com/Jackett/Jackett/blob/master/src/Jackett.Common/Indexers/IPTorrents.cs). Here are [qBittorrent's instructions](https://github.com/qbittorrent/search-plugins/wiki/How-to-configure-Jackett-plugin) to configure Jackett in qBittorrent.
+
+## Installation
 
 Because IPTorrents requires an account, this plugin requires a bit more work than most.
 
