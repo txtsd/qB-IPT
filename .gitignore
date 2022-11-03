@@ -1,1 +1,12 @@
+.idea
 __pycache__
+
+__init__.py
+engines/
+helpers.py
+nova2.py
+nova2dl.py
+novaprinter.py
+sgmllib3.py
+socks.py
+urllib.parse
