@@ -9,7 +9,7 @@ This project has been discontinued in favor of [Jackett](https://github.com/Jack
 Project: <https://sr.ht/~txtsd/qB-IPT/> <br>
 Sources: <https://sr.ht/~txtsd/qB-IPT/sources> <br>
 Ticket Tracker: <https://todo.sr.ht/~txtsd/qB-IPT> <br>
-Mailing Lists: <https://lists.sr.ht/~txtsd/qB-IPT> <br>
+Mailing List: <https://lists.sr.ht/~txtsd/qB-IPT> <br>
 
 Mirrors: <br>
 [Codeberg](https://codeberg.org/txtsd/qB-IPT) <br>
