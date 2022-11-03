@@ -4,6 +4,22 @@
 
 This project has been discontinued in favor of [Jackett](https://github.com/Jackett/Jackett). Jackett supports IPTorrents [out-of-the-box](https://github.com/Jackett/Jackett/blob/master/src/Jackett.Common/Indexers/IPTorrents.cs). Here are [qBittorrent's instructions](https://github.com/qbittorrent/search-plugins/wiki/How-to-configure-Jackett-plugin) to configure Jackett in qBittorrent.
 
+## Links
+
+Project: <https://sr.ht/~txtsd/qB-IPT/> <br>
+Sources: <https://sr.ht/~txtsd/qB-IPT/sources> <br>
+Ticket Tracker: <https://todo.sr.ht/~txtsd/qB-IPT> <br>
+Mailing Lists: <https://lists.sr.ht/~txtsd/qB-IPT> <br>
+
+Mirrors: <br>
+[Codeberg](https://codeberg.org/txtsd/qB-IPT) <br>
+[NotABug](https://notabug.org/txtsd/qB-IPT) <br>
+[GitLab](https://gitlab.com/txtsd/qb-ipt) <br>
+[GitHub](https://github.com/txtsd/qB-IPT) <br>
+[Bitbucket](https://bitbucket.org/txtsd/qb-ipt) <br>
+
+If sourcehut is not feasible, contribution is welcome from across mirrors.
+
 ## Installation
 
 Because IPTorrents requires an account, this plugin requires a bit more work than most.
